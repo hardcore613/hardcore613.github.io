@@ -157,8 +157,7 @@ body {
 }
 
 #blog, #projects {
-  scrollbar-width: thin;
-  scrollbar-color: dark;
+  scrollbar-width: none;
   width: 100%;
   display: -ms-grid;
   display: grid;
