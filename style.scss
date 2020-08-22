@@ -113,13 +113,11 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    overflow-x: hidden;
     overflow-y: hidden;
+    overflow-x: hidden;
   }
   
   #blog,  #projects {
-    scrollbar-width: none;
-    // overflow-y: scroll;
     // scrollbar-width: none;
     width:100%;
     display: grid;
@@ -198,6 +196,10 @@ body {
     font-size: 18px;
 }
 
+#projects {
+    width: 100%;
+}
+
 #contact {
     grid-area: contact;
     display: grid;
@@ -258,7 +260,7 @@ body {
     .name {
         display: block;
         font-size: 6vw;
-        margin-bottom: 25px;;
+        margin-bottom: 25px;
     }
 
     .about {

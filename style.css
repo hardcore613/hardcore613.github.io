@@ -152,12 +152,11 @@ body {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow-x: hidden;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 #blog, #projects {
-  scrollbar-width: none;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -263,6 +262,10 @@ i {
 .card-desc {
   color: grey;
   font-size: 18px;
+}
+
+#projects {
+  width: 100%;
 }
 
 #contact {
