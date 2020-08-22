@@ -156,7 +156,20 @@ body {
   overflow-x: hidden;
 }
 
-#blog, #projects {
+#blog {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+}
+
+#projects {
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -262,10 +275,6 @@ i {
 .card-desc {
   color: grey;
   font-size: 18px;
-}
-
-#projects {
-  width: 100%;
 }
 
 #contact {

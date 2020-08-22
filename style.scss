@@ -117,7 +117,17 @@ body {
     overflow-x: hidden;
   }
   
-  #blog,  #projects {
+  #blog {
+    // scrollbar-width: none;
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  #projects {
     // scrollbar-width: none;
     width:100%;
     display: grid;
@@ -196,10 +206,6 @@ body {
     font-size: 18px;
 }
 
-#projects {
-    width: 100%;
-}
-
 #contact {
     grid-area: contact;
     display: grid;
@@ -208,7 +214,6 @@ body {
     place-items: center;
     width: 100%;
     height: 100%;
-
 
     i {
         color: white;
