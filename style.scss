@@ -115,26 +115,24 @@ body {
     flex-wrap: wrap;
     overflow-y: hidden;
     overflow-x: hidden;
+    row-gap: 2em;
   }
   
-  #blog {
-    // scrollbar-width: none;
+  #blog, #projects {
+    scrollbar-width: none;
     width:100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2em;
     align-items: center;
     overflow-x: hidden;
-  }
-
-  #projects {
-    // scrollbar-width: none;
-    width:100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2em;
-    align-items: center;
-    overflow-x: hidden;
+    -ms-overflow-style: none;
+    // Firefox
+    scrollbar-width: none;
+    // Chrome, Safari
+    &::-webkit-scrollbar {
+        display: none;
+    }
   }
 
   .card {
@@ -214,6 +212,13 @@ body {
     place-items: center;
     width: 100%;
     height: 100%;
+    -ms-overflow-style: none;
+    // Firefox
+    scrollbar-width: none;
+    // Chrome, Safari
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     i {
         color: white;
