@@ -291,6 +291,30 @@ i {
   display: none;
 }
 
+#contact .fa-html5:hover {
+  color: #E44D26;
+}
+
+#contact .fa-css3-alt:hover {
+  color: #009CDE;
+}
+
+#contact .fa-js-square:hover {
+  color: #F0D91D;
+}
+
+#contact .fa-sass:hover {
+  color: #C76495;
+}
+
+#contact .fa-github-square:hover {
+  color: #1F1E1E;
+}
+
+#contact .fa-linkedin:hover {
+  color: #005E8E;
+}
+
 #contact i {
   color: white;
   font-size: 5vw;
