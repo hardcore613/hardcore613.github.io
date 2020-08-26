@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,900;1,400&display=swap');
+@import './fonts';
+@import './variables';
 
 *, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    ;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+        font-family: 'Josefin Sans', sans-serif;
 }
 
 a {
@@ -13,25 +17,28 @@ a {
     cursor: pointer;
 
     &:hover {
-        // color: #ffffff;
         transform: scale(1.06);
-        filter: brightness(1.70);
+        color: white;
+        // filter: brightness(1.7);
     }
 }
 
 body {
-    max-width: 90%;
+    width: 90%;
     height: 100vh;
     margin: 0 auto;
     background-color: #101010;
     color:#707070;
     font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    // font-family: 'Josefin Sans', sans-serif;
+    font-size: 62.5%;
 }
 
 .grid-container {
     height: 100vh;
     display: grid;
-    gap: 2em;
+    gap: 2rem;
     grid-template-columns: 1fr 1.5fr;
     grid-template-rows: 0.6fr 1fr 1fr 1fr 0.6fr;
     grid-template-areas: 
@@ -55,20 +62,22 @@ body {
 }
 
 .name {
-    font-size: 3.7vh;
-    color: white;
+    // font-size: 3.7vh;
+    font-size: 3vh;
+    color: snow;
 }
 
 .about {
     font-size: 1.3vw;
+    width: 90%;
 }
 
 .links {
     display: flex;
     flex-direction: column;
-    // justify-content:
     font-size: 20px;
-    
+
+
     a {
         text-decoration: none;
         display: flex;
@@ -76,6 +85,11 @@ body {
         align-items: center;
         margin-bottom: 52px;
         transition: ease-in-out;
+        
+        &:hover {
+            letter-spacing: 2px;
+        }
+        
     }
 }
 
@@ -97,11 +111,15 @@ body {
             height: 80%;
             width: auto;
             border-radius: 100%;
-            margin-right: 50px;;
+            margin-right: 50px;
         }
 
         a {
             margin-right: 50px;
+        }
+
+        i{
+            font-size: 3rem;
         }
 
 }   
@@ -117,9 +135,16 @@ body {
     overflow-x: hidden;
     row-gap: 2em;
   }
+
+  .section-title {
+      font-size: 1.5rem;
+      color: white;
+      letter-spacing: 5px;
+      font-weight: 600;
+      font-family: 'Josefin Sans' sans-serif;
+  }
   
   #blog, #projects {
-    scrollbar-width: none;
     width:100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -136,7 +161,7 @@ body {
   }
 
   .card {
-    height: 180px;
+    height: 200px;
     border-radius: 8px;
     padding: 15px;
   }
@@ -163,8 +188,7 @@ body {
 
   i {
     font-size: 6vw;
-    color: white;
-    // outline: 1px blue solid;
+    color: snow;
     flex-grow: 2;
     text-align: center;
   }
@@ -181,7 +205,6 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 2rem;
-    // outline: 1px red solid;
     flex-grow: 5;
     justify-content: space-evenly;
     height: 100%;
@@ -220,34 +243,36 @@ body {
         display: none;
     }
 
+    i {
+        color: white;
+        font-size: 5v;
+        transition: all .3 ease-in;
+    }
+    
     .fa-html5:hover {
-        color: #E44D26;
+        color: $html-color;
     }
 
     .fa-css3-alt:hover{
-        color: #009CDE;
+        color: $css-color;
     }
 
     .fa-js-square:hover{
-        color: #F0D91D;
+        color: $js-color
     }
 
     .fa-sass:hover{
-        color: #C76495;
+        color: $sass-color
     }
 
     .fa-github-square:hover{
-        color: #1F1E1E;
+        color: $github-color
     }
 
     .fa-linkedin:hover{
-        color: #005E8E;
+        color: $linkedin-color
     }
 
-    i {
-        color: white;
-        font-size: 5vw;
-    }
     p {
         grid-column: 1/-1;
     }
@@ -261,10 +286,10 @@ body {
         font-weight: 700;
         letter-spacing: 4px;
         color: white;
-        opacity: 0.8;
+        opacity: 0.7;
 
         &:hover {
-            opacity: 1;
+            opacity: 0.9;
         }
     }
     
@@ -272,8 +297,10 @@ body {
 
 // Media queries
 
-@media (max-width: 750px) {
+@media (max-width: 450px) {
     body {
+        max-width: 90%;
+        margin: 0 auto;
         height: initial;
     }
 
@@ -313,6 +340,10 @@ body {
 
         i {
             font-size: 4rem;
+        }
+
+        .card {
+            height: 250px;
         }
 
         .card-left, .card-right {
